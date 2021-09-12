@@ -1,5 +1,8 @@
 public class BaseConv {
 	private const string m_Chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	public static string ToBase(int aValue, int aBase) {
+		return ToBase((long)aValue, aBase);
+	}
 	public static string ToBase(long aValue, int aBase) {
 		string vOut = "";
 		while (aValue > 0) {
