@@ -1,3 +1,5 @@
+using System.Text;
+using System.IO;
 public class BaseConv {
 	private const string m_Chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public static string ToBase(int aValue, int aBase) {
