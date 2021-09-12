@@ -1,2 +1,2 @@
 ## Copy & paste code
-For you, or myself, contributions welcome.
+For you, or myself.
