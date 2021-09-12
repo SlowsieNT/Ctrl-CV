@@ -1,5 +1,5 @@
 public class BaseConv {
-    private const string m_Chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	private const string m_Chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 	public static string ToBase(long aValue, int aBase) {
 		string vOut = "";
 		while (aValue > 0) {
@@ -8,7 +8,7 @@ public class BaseConv {
 			aValue /= aBase;
 		}
 		return vOut;
-    }
+	}
 }
 public class Utilities {
 	public static bool MakeDir(string aDirName) {
@@ -26,9 +26,9 @@ public class Utilities {
 		return BaseConv.ToBase(vUnixTS, 36);
 	}
 	public static string DecodeBase64Modified(string aModifiedBase64) {
-        string vPadded = aModifiedBase64.PadRight(aModifiedBase64.Length + (4 - aModifiedBase64.Length % 4) % 4, '=');
-        return Encoding.UTF8.GetString(Convert.FromBase64String(vPadded));
-    }
+		string vPadded = aModifiedBase64.PadRight(aModifiedBase64.Length + (4 - aModifiedBase64.Length % 4) % 4, '=');
+		return Encoding.UTF8.GetString(Convert.FromBase64String(vPadded));
+	}
 	public static string URIDecode(string aStr) { // Uri.Unescape doesn't work
 		// No evil RegEx; Behold the Legacy code unfold
 		string vOut = "";
