@@ -1,3 +1,4 @@
+using System.Net;
 public class WebClientEx : WebClient {
 	public CookieContainer m_CookieContainer;
 	public Uri Uri;
