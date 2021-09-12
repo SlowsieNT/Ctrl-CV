@@ -1,3 +1,15 @@
+public class BaseConv {
+    private const string m_Chars = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	public static string ToBase(long aValue, int aBase) {
+		string vOut = "";
+		while (aValue > 0) {
+			int vIdx = (int)(aValue % aBase);
+			vOut = m_Chars[vIdx] + vOut; // use StringBuilder for better performance
+			aValue /= aBase;
+		}
+		return vOut;
+    }
+}
 public class Utilities {
 	public static bool MakeDir(string aDirName) {
 		aDirName = Environment.ExpandEnvironmentVariables(aDirName);
