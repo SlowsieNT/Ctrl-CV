@@ -50,7 +50,7 @@ public class Utilities {
 				if ('u' == aStr[1 + vI]) {
 					vUpperBound = 3; // means: length 4
 					vOffset2 = 1; // due 'u' offset2 exists
-					vInvalidEncSeqPrefix = "%u"; // due 'u' vTemp exists
+					vInvalidEncSeqPrefix = "%u"; // due 'u' vInvalidEncSeqPrefix exists
 				}
 				// loop through until upperbound reached
 				for (int vI2 = 1 + vOffset2 + vI; !vInvalidEncSeq && vI2 < vLen; vI2++) {
