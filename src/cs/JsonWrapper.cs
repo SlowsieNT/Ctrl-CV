@@ -1,6 +1,6 @@
 using System.Web.Script.Serialization;
 // Newtonsoft JSON?? No no no, we dont use needless things
-public class JSON { // System.Web.Extensions.dll
+public class JSON { // ref dll: System.Web.Extensions.dll
 	static JavaScriptSerializer m_JSS = new JavaScriptSerializer();
 	public static string Stringify<T>(T aObject) {
 		try {
