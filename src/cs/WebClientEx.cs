@@ -13,7 +13,7 @@ public class WebClientEx: WebClient {
     public string Referer = "";
     public string UserAgent = "";
     public string ContentType = "";
-    public int Timeout;
+    public int Timeout = 15000;
     protected override WebRequest GetWebRequest(Uri aAddress) {
         WebRequest vReq = base.GetWebRequest(aAddress);
         if (vReq is HttpWebRequest)
