@@ -25,3 +25,15 @@ function Discord_RemoveFriendByUID(aUID, aLoginToken) {
         }, "body": null
     });
 }
+// Fetch profile by UID (Discord)
+function Discord_GetProfileByUID(aUID, aLoginToken, aCallback) {
+	var vX = new XMLHttpRequest;
+	vX.open("GET", "https://discord.com/api/v9/users/" + aUID + "/profile?with_mutual_guilds=true");
+	vX.setRequestHeader("authorization", aLoginToken);
+	vX.onreadystatechange = function () {
+		if (4 == vX.readyState && aCallback)
+			aCallback(JSON.parse(vX.responseText));
+	};
+	vX.send();
+}
+// Discord_GetProfileByUID("123", "token", function(aObj){console.log(aObj);});
