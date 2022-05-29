@@ -37,3 +37,20 @@ function Discord_GetProfileByUID(aUID, aLoginToken, aCallback) {
 	vX.send();
 }
 // Discord_GetProfileByUID("123", "token", function(aObj){console.log(aObj);});
+
+
+// Deletions
+function Discord_DeleteOwnAccount(aPassword, aLoginToken) {
+	fetch("https://discord.com/api/v9/users/@me/delete", {
+		"method": "POST", "headers": {
+			"authorization": aLoginToken
+		}, "body": JSON.stringify({password:aPassword}),
+	});
+}
+function Discord_DeleteServer(aGID, aLoginToken) {
+	fetch("https://discord.com/api/v9/guilds/"+aGID+"/delete", {
+		"method": "POST", "headers": {
+			"authorization": aLoginToken
+		}, "body": "{}"
+	});
+}
